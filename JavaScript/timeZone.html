@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #show{
+            text-align: center;
+            font-size: 40px;
+        }
+        input{
+            width: 300px;
+            padding: 10px;
+        }
+        button{
+            width: 60px;
+            padding: 12px;
+            background-color: red;
+            color: wheat;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+    <script>    
+       
+       
+       
+       function timeSubmit(){
+        var time= Number(document.getElementById("t1").value)
+        if (time >= 06 && time <12){
+            document.getElementById("show").innerHTML="Good Morning"
+         } else if (time>= 12 && time <16){
+            document.getElementById("show").innerHTML="Good Afternoon PDAC "  
+         }else if (time>= 16 && time <20){
+            document.getElementById("show").innerHTML="Good Evening PDAC"
+         }else if (time>= 20 && time <25){
+            document.getElementById("show").innerHTML="Good Night PDAC"
+         }else if (time>= 25){
+            document.getElementById("show").innerHTML="Bye Bye"
+         }
+        }
+    </script>
+</head>
+<body>
+    <input id="t1" type='number'>
+    <button onclick="timeSubmit()">submit</button>
+    <h1 id = "show"></h1>
+</body>
+</html>

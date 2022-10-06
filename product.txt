@@ -1,0 +1,32 @@
+// import { Grid, TextField,Button,Rating,Typography} from "@mui/material";
+
+// const [name,setName]=useState();
+    // const [price,setPrice]=useState();
+    // const [rating,setRating]=useState();
+    // const [description,setDescription]=useState();
+
+    // const handleAdd=()=>{
+    //     const product={name,price,rating,description};
+    //     setData([product,...data]);
+    //     setName("");
+    //     setPrice("");
+    //     setRating();
+    //     setDescription("");
+    // }
+
+    {/* <Grid item xs={3}>
+                    <TextField variant="outlined" label="Product Name" value={name} fullWidth onChange={e=>setName(e.target.value)}/>
+                </Grid>
+                <Grid item xs={2}>
+                    <TextField variant="outlined" label="Product Price" value={price} fullWidth onChange={e=>setPrice(e.target.value)}/>
+                </Grid>
+                <Grid item xs={2}>
+                    <Typography component="legend">Rating</Typography>
+                    <Rating name="simple-controlled" value={rating} onChange={e =>setRating(e.target.value)}/>
+                </Grid>
+                <Grid item xs={3}>
+                    <TextField variant="outlined" label="Product Description" value={description} fullWidth onChange={e=>setDescription(e.target.value)}/>
+                </Grid>
+                <Grid item xs={2}>
+                    <Button variant="contained" fullWidth onClick={handleAdd}>Add</Button>
+                </Grid> */}

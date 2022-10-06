@@ -1,0 +1,28 @@
+#Icons
+https://tablericons.com/
+https://heroicons.com/
+https://fonts.google.com/icons
+http://www.zondicons.com/
+http://www.entypo.com/
+
+#Patterns
+https://heropatterns.com/
+
+#Illustrations
+https://undraw.co/
+
+#Components
+https://tailwindui.com/
+https://headlessui.dev/
+https://tailwindcomponents.com/
+https://daisyui.com/ (over 9000 GitHub starts)
+
+#Picked Resources and Tools (1000+)
+https://github.com/bradtraversy/design-resources-for-developers (design resources for developers)
+https://toolkit.addy.codes/ => (647 hand-picked tools & resources for web designers & developers.)
+https://tympanus.net/ (creative front-end resources and inspiration for web professionals)
+https://niemvuilaptrinh.medium.com/top-87-web-design-tools-for-developer-816e52e3a521
+https://www.tailwindtoolbox.com/
+
+#Figma Furniture Design
+https://www.figma.com/file/nvdlpsBqtyXnayiuTDIHBy/Furniture-Website-(Community)?node-id=16%3A65

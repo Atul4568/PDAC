@@ -1,0 +1,634 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title></title>
+</head>
+<body>
+
+
+
+	<div>
+	<div>
+		<div>
+<HTML>
+<HEAD>
+
+</HEAD>
+
+<BODY >
+          
+</BODY>
+</HTML>
+
+		</div>
+	</div>
+	<div>
+		<div>
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>PAN - Login</title>
+	<link href="assets/css/icons/icomoon/styles.css" rel="stylesheet" type="text/css" />
+	<link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+	<link href="assets/css/core.min.css" rel="stylesheet" type="text/css"/>
+	<link href="assets/css/components.min.css" rel="stylesheet" type="text/css"/>
+	<!-- Core JS files -->
+	<script type="text/javascript" src="/paam/assets/js/core/libraries/jquery.min.js;jsessionid=094459D47288750E1270B46BA5226959.paamtomcat12"></script>
+	<script type="text/javascript" src="/paam/SCRIPT/CategoryTitleAjax.js;jsessionid=094459D47288750E1270B46BA5226959.paamtomcat12?v=1566"></script>
+	 <script type="text/javascript" src="/paam/SCRIPT/STMRegistration.js;jsessionid=094459D47288750E1270B46BA5226959.paamtomcat12?v=1582"></script> 
+	<script src="/paam/SCRIPT/jquery.maskedinput.min.js;jsessionid=094459D47288750E1270B46BA5226959.paamtomcat12"></script> 
+
+	
+
+	
+		
+
+<script>
+$(document).ready(function(){
+document.getElementById("rowCR").style.display = 'none';
+ var position = 0;
+var cat_applicant1=document.getElementById("cat_applicant1");
+var check = false;
+
+
+//var checkIndCr = false; // Added for removing Ind CR 
+//var positionIndCr = 0; // Added for removing Ind CR 
+
+$("#type").change(function(){
+var requestType=document.getElementById("type").value;
+
+
+
+if(requestType=='CR'){
+document.getElementById("rowCR").style.display = 'block';
+//Added FOR Remove COMPANY :START
+for (i=0;i<cat_applicant1.length;  i++) {
+   if (cat_applicant1.options[i].value=='C') {
+    check=true;
+   }
+}
+
+if(check==false){
+
+ var posvalueD = 'C';
+var poscharD = 'COMPANY';
+var curvalueD='0';
+var curcharD='0';
+
+
+for(i=position;i<cat_applicant1.length;i++)
+{
+
+
+curvalueD=cat_applicant1.options[i].value;
+curcharD = cat_applicant1.options[i].text;
+cat_applicant1.options[i] = new Option(poscharD,posvalueD);
+posvalueD=curvalueD;
+poscharD=curcharD;
+
+//$("#cat_applicant1").append('<option value="L">LOCAL AUTHORITY</option>');
+
+
+
+
+} 
+$("#cat_applicant1").append(new Option('LOCAL AUTHORITY', 'L'));
+}
+
+// Added for removing Ind CR start
+
+// for (i=0;i<cat_applicant1.length;  i++) {
+ //  if (cat_applicant1.options[i].value=='P') {
+//	positionIndCr = i;
+//    cat_applicant1.remove(i);
+	
+	
+ //  checkIndCr=false;
+ //  }
+   
+//} 
+
+//Added for removing Ind CR end
+
+}else if(requestType=='49A')
+{
+for (i=0;i<cat_applicant1.length;  i++) {
+   if (cat_applicant1.options[i].value=='C') {
+   position = i;
+   cat_applicant1.remove(i);
+	
+	
+	 check=false;
+   }
+   
+ //Added for removing Ind CR start
+//   if (cat_applicant1.options[i].value=='P') {
+//	    checkIndCr=true;
+//  }
+ //Added for removing Ind CR end
+}
+
+//Added for removing Ind CR start
+
+//if(checkIndCr==false){
+
+//	 var posvalueD = 'P';
+//	var poscharD = 'INDIVIDUAL';
+//	var curvalueD='0';
+//	var curcharD='0';
+
+
+//	for(i=positionIndCr;i<cat_applicant1.length;i++)
+//	{
+
+
+//	curvalueD=cat_applicant1.options[i].value;
+//	curcharD = cat_applicant1.options[i].text;
+//	cat_applicant1.options[i] = new Option(poscharD,posvalueD);
+//	posvalueD=curvalueD;
+//	poscharD=curcharD;
+//
+	//$("#cat_applicant1").append('<option value="L">LOCAL AUTHORITY</option>');
+
+
+
+
+//	} 
+//	$("#cat_applicant1").append(new Option('LOCAL AUTHORITY', 'L'));
+//	}
+
+
+//Added for removing Ind CR end
+}else
+{
+for (i=0;i<cat_applicant1.length;  i++) {
+   if (cat_applicant1.options[i].value=='C') {
+    check=true;
+   }
+ //Added for removing Ind CR start
+//   if (cat_applicant1.options[i].value=='P') {
+//	    checkIndCr=true;
+ //  }
+ //Added for removing Ind CR end
+}
+
+if(check==false){
+
+
+//cat_applicant1.options[position] = new Option('COMPANY', 'C');
+
+ var posvalueD = 'C';
+var poscharD = 'COMPANY';
+var curvalueD='0';
+var curcharD='0';
+
+
+for(i=position;i<cat_applicant1.length;i++)
+{
+
+
+curvalueD=cat_applicant1.options[i].value;
+curcharD = cat_applicant1.options[i].text;
+cat_applicant1.options[i] = new Option(poscharD,posvalueD);
+posvalueD=curvalueD;
+poscharD=curcharD;
+
+//$("#cat_applicant1").append('<option value="L">LOCAL AUTHORITY</option>');
+
+
+
+
+} 
+$("#cat_applicant1").append(new Option('LOCAL AUTHORITY', 'L'));
+}
+//Added FOR Remove COMPANY :END
+
+
+//Added for removing Ind CR start
+
+//if(checkIndCr==false){
+
+
+	//cat_applicant1.options[position] = new Option('COMPANY', 'C');
+
+//	 var posvalueD = 'P';
+//	var poscharD = 'INDIVIDUAL';
+//	var curvalueD='0';
+//	var curcharD='0';
+
+
+//	for(i=positionIndCr;i<cat_applicant1.length;i++)
+//	{
+		
+
+//	curvalueD=cat_applicant1.options[i].value;
+//	curcharD = cat_applicant1.options[i].text;
+//	cat_applicant1.options[i] = new Option(poscharD,posvalueD);
+//	posvalueD=curvalueD;
+//	poscharD=curcharD;
+
+	//$("#cat_applicant1").append('<option value="L">LOCAL AUTHORITY</option>');
+
+
+
+
+//	} 
+	$("#cat_applicant1").append(new Option('LOCAL AUTHORITY', 'L'));
+//	}
+
+//Added for removing Ind CR end
+document.getElementById("rowCR").style.display = 'none';
+}
+});
+
+
+  
+  $("#Refresh").click(function () {
+  document.getElementById('captchaImg').src = 'Captcha?'+Math.random();
+  
+
+       
+    });
+
+
+  $("#Refresh1").click(function () {
+  document.getElementById('captchaImg1').src = 'CaptchaEndUser?'+Math.random();
+ 
+
+       
+    });
+
+
+
+	
+
+
+	
+  });
+</script>
+</head>
+
+<body class="layout-boxed">
+	<!-- Main navbar -->
+	<div class="navbar navbar-inverse navbar-fixed-top">
+		<div class="navbar-boxed">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#"><img src="assets/images/logo_light.png" /></a>
+			</div></div></div>	
+	<!-- /main navbar -->
+	<!-- Page header -->
+	<div class="page-header">
+		<div class="breadcrumb-line breadcrumb-line-wide">
+			<div class="breadcrumb-boxed">
+				<ul class="breadcrumb">
+					<li><a href="endUserRegisterContact.html"><i class="icon-home2 position-left"></i> Home</a></li>
+					<li class="active">Login</li>
+				</ul></div></div>
+		<div class="page-header-content">
+			<div class="page-title">
+				<h1>
+					<span class="text-semibold">Online PAN application</span>
+				</h1>
+			</div>	
+			 <center><div><font color="red"></font></div></center>	
+			 <!-- Added for CR# 54203:: To provide facility to enable and disable E-kyc and E-sign funtionality in Paam Fullform::start -->			 
+			 <div><font color="red"></font></div>
+	<!-- Added for CR# 54203:: To provide facility to enable and disable E-kyc and E-sign funtionality in Paam Fullform::end -->
+      <!--  <p><span class="text-bold"><font color='red'>Online PAN application services requiring paper documents to be sent to NSDL e-Gov and scanned based applications are also not available as of now. However, PAN applicants can continue to use e-KYC based facility.</font></span></p> -->
+     
+ <p>
+      <span class="text-semibold">As per ITD guidelines,'Request for New PAN Card or/and Changes or Correction in PAN Data' application is presently to be used <u><b> only for update/correction in PAN database.</u> </b>For procedure to link Aadhaar with PAN, please click <a href="https://www.incometax.gov.in/iec/foportal/help/how-to-link-aadhaar">here.</a> </span> 
+      </p>
+
+	<p>
+				<span class="text-semibold">As per provisions of Section 272B of the Income Tax Act., 1961, a penalty of &#x20b9; 10,000 can be levied on possession of more than one PAN.</span>
+				</p>				 
+			<hr class="custom" />
+		</div>
+	</div>
+	<!-- /page header -->
+	<!-- Page container -->
+	<div class="page-container">
+		<!-- Page content -->
+		<div class="page-content">
+			<!-- Main content -->
+			<div class="content-wrapper">
+				<!-- TABS -->
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="panel panel-flat">
+							<div class="panel-body-">
+								<div class="tabbable">
+									<ul class="nav nav-tabs nav-tabs-highlight">
+										<li class="active"><a href="#left-icon-tab1" data-toggle="tab"><i class="icon-user-plus position-left"></i> Apply Online </a></li>
+										<li><a href="#left-icon-tab2" data-toggle="tab"><i class="icon-reading position-left"></i> Registered User </a></li>										
+									</ul>
+
+									<div class="tab-content">
+										<div class="tab-pane active" id="left-icon-tab1">											
+											<form id="registerForm" action="registerEndUser.html;jsessionid=094459D47288750E1270B46BA5226959.paamtomcat12" method="post">
+												<div class="light-bg">
+													<div class="panel-body">
+														<div class="row">
+															<div class="col-sm-4">
+																<div class="form-group">
+																	<label>Application Type<span class="text-danger">*</span></label>
+																	
+																	<select id="type" name="requestType" data-placeholder="Select Application Type" name="category" class="select"> 
+																		 <option value="none">----Please Select------</option>
+  																	 	<option value="49A">New PAN - Indian Citizen (Form 49A)</option><option value="49AA">New PAN - Foreign Citizen (Form 49AA)</option><option value="CR">Changes or Correction in existing PAN Data / Reprint of PAN Card (No changes in existing PAN Data)</option>
+																	</select>
+																</div>
+															</div>
+															<div class="col-sm-4">
+																<div class="form-group">
+																	<label>Category<span class="text-danger">*</span></label>
+																	
+																	<select id="cat_applicant1" name="category" data-placeholder="Select Category" name="category" class="select"> 
+																		<option value="none">----Please Select------</option>
+																		<option value="P">INDIVIDUAL</option><option value="A">ASSOCIATION OF PERSONS</option><option value="B">BODY OF INDIVIDUALS</option><option value="C">COMPANY</option><option value="T">TRUST</option><option value="E">LIMITED LIABILITY PARTNERSHIP</option><option value="F">FIRM</option><option value="G">GOVERNMENT</option><option value="H">HINDU UNDIVIDED FAMILY</option><option value="J">ARTIFICIAL JURIDICAL PERSON</option><option value="L">LOCAL AUTHORITY</option>
+																	</select>
+																</div>
+															</div>
+														</div>	
+													</div>	
+												</div>
+												
+												<div class="tab-sub-head">												
+													<h5 class="panel-title">Applicant information <i class="icon-info22 blue" data-placement="top" data-popup="tooltip" title="1. Initials are not permitted in first and last name 2. Applicant's proof of identity, proof of address and proof of date of birth should contain the exact name mentioned in this field"></i></h5>												
+												</div>
+												
+												<div class="light-bg">
+													<div class="panel-body">
+														<div class="row">
+
+															<div class="col-sm-4">
+																<div class="form-group">
+																	<label>Title<span class="text-danger">*</span></label>
+																	<img src="" style="float: left; width: 30px; margin-right: 10px;display: none;" id="image0"></img>
+																	<select id="rvNameInitials" name="rvNameInitials" onkeypress="return event.keyCode != 13;" data-placeholder="Select Title" name="title" class="select">
+																		<option value="none">----Please Select------</option>	
+																	</select>
+																</div>
+																<div>
+																<img src="" style="float: left; width: 30px; margin-right: 10px;display: none;" id="image0"><span style="word-wrap: break-word;float: left;"  id="result_message"></span>
+																</div>
+															</div>
+														</div>
+														<div class="row">
+															<div class="col-sm-4">
+																<div class="form-group">
+																	<label>Last Name / Surname<span class="text-danger">*</span></label>		
+																	<input id="l_name_end" name="lastName" onkeypress="return event.keyCode != 13;" name="l_name_end" class="form-control" type="text" value="" maxlength="75" autocomplete="off"/>
+																</div>
+															</div>
+															
+															<div class="col-sm-4">
+																<div class="form-group">
+																	<label>First Name</label>
+																	
+																	<input id="f_name_end" name="firstName" onkeypress="return event.keyCode != 13;" name="f_name_end" class="form-control" type="text" value="" maxlength="25" autocomplete="off"/>
+																</div>
+															</div>
+
+															<div class="col-sm-4">
+																<div class="form-group">
+																	<label>Middle Name</label>
+																	<input id="m_name_end" name="middleName" onkeypress="return event.keyCode != 13;" name="m_name_end" class="form-control" type="text" value="" maxlength="25" autocomplete="off"/>
+																</div>
+															</div>
+														</div>
+														<div class="row">
+															<div class="col-sm-4">
+																<div class="form-group">
+																	<label>Date of Birth / Incorporation / Formation (DD/MM/YYYY)<span class="text-danger">*</span></label>
+																	
+																<input id="date_of_birth_reg" name="dateOfBirth" onkeypress="return event.keyCode != 13;" class="form-control daterange-single" type="text" value="" autocomplete="off"/>
+																	
+																
+
+																	
+																</div>
+															</div>	
+															
+															<div class="col-sm-4">
+																<div class="form-group">
+																	<label>Email ID<span class="text-danger">*</span></label>
+																	<input id="email_id2" name="emailId" onkeypress="return event.keyCode != 13;" name="email" class="form-control" type="text" value="" maxlength="40" autocomplete="off"/>
+																	
+																</div>
+															</div>
+															
+															<div class="col-sm-4">
+																<div class="form-group">
+																	<label>Mobile Number<span class="text-danger">*</span></label>
+																	<input id="rvContactNo" name="rvContactNo" onkeypress="return event.keyCode != 13;" name="mobile" class="form-control" type="text" value="" maxlength="10" autocomplete="off"/>
+																</div>
+															</div>										
+														</div>
+														<div class="row" id="rowCR">
+															<div class="col-sm-4">
+																<div class="form-group">
+																	<label class="display-block">Whether Citizen of India<span class="text-danger">*</span></label>
+																	<label class="radio-inline">
+																		<input id="citizenCr1" name="checkboxCitizen" onkeypress="return event.keyCode != 13;" name="checkboxCitizen" type="radio" value="I"/>
+																		Yes
+																	</label>
+
+																	<label class="radio-inline">
+																		<input id="citizenCr2" name="checkboxCitizen" onkeypress="return event.keyCode != 13;" name="checkboxCitizen" type="radio" value="F"/>
+																		No
+																	</label>
+																</div>	
+															</div>
+															<div class="col-sm-4">
+																<div class="form-group" id="rvPanNum_div_id">
+																	<label class="display-block">PAN NUMBER<span class="text-danger">*</span></label>
+																<input id="rvPanNum" name="rvPanNum" onkeypress="return event.keyCode != 13;" name="pan" class="form-control" type="text" value="" maxlength="10" autocomplete="off"/>
+																<span class="help-block" id="rvPanNum_error"></span>
+																</div>
+															</div>
+														</div>
+														
+												<!-- CR #60422 starts -->
+												<!-- Added by Roshni for Adding Consent message::start -->
+												<div class="row" id="reprintoption"> 
+													<div class="col-sm-12">
+														<div class="form-group">
+															<input type="checkbox" name="consent" value="consent" id="consent">	
+															<input id="fullformConsent" name="fullformConsent" type="hidden" value=""/>	
+															By submitting data to us and/or using our NSDL e-Gov TIN web site <a href="https://www.onlineservices.nsdl.com/paam/endUserRegisterContact.html" style="color: blue; text-decoration: underline;" >https://www.onlineservices.nsdl.com/paam/endUserRegisterContact.html</a> you give your consent that all personal data/information that you submit to avail tax related services from NSDL e-Governance Infrastructure Limited may be received, stored, processed, transmitted and or made available for view /use as mandated by law or otherwise, shall be dealt with by us in the manner and for the purposes  specified / as described in the  privacy policy or as mandated by law.
+														</div>
+													</div>
+												</div> 
+												<!-- Added by Roshni for Adding Consent message::end -->
+												<!-- CR #60422 ends -->
+														
+														<div class="col-sm-4">
+																<div class="form-group">
+																	<label>Captcha Code <span class="text-danger">*</span></label>
+																	<div class="input-group">
+																		<p> <img src="CaptchaEndUser?0.4285680341384883" id="captchaImg1" class="captcha-inter col-sm-8" />
+																		<i class="icon-rotate-cw2" id="Refresh1"></i></p><br>
+																		<input id="captcha1" name="ekyc16" onkeypress="return event.keyCode != 13;" class="form-control" type="text" value="" maxlength="5"/>
+																		
+																	</div>
+																</div>
+															</div>
+														
+														
+														
+														
+													</div>
+												</div>
+												
+												
+												<!-- Added by Roshni for Adding Consent message::start
+												<div class="row" id="reprintoption"> 
+													<div class="col-sm-12">
+														<div class="form-group">
+															<input type="checkbox" name="consent" value="consent" id="consent">	
+															<input id="fullformConsent" name="fullformConsent" type="hidden" value=""/>	
+															By submitting data to us and/or using our NSDL e-Gov TIN web site <a href="https://www.onlineservices.nsdl.com/paam/endUserRegisterContact.html" style="color: blue; text-decoration: underline;" >https://www.onlineservices.nsdl.com/paam/endUserRegisterContact.html</a> you give your consent that all personal data/information that you submit to avail tax related services from NSDL e-Governance Infrastructure Limited may be received, stored, processed, transmitted and or made available for view /use as mandated by law or otherwise, shall be dealt with by us in the manner and for the purposes  specified / as described in the  privacy policy or as mandated by law.
+														</div>
+													</div>
+												</div> 
+												 Added by Roshni for Adding Consent message::end -->
+																						
+											
+												<div class="tab-sub-head">												
+													<div class="text-left">
+														<button class="btn btn-primary" type="button" name="Reset" value="Reset" id="resetForm1">Reset</button>
+												<!--    <button class="btn btn-primary" type="submit" name="reg" value="Submit" id="submitForm" >Submit</button>	-->
+												        <button class="btn btn-primary" type="button" name="reg" value="Submit" id="submitForm" >Submit</button>
+													</div>										
+												</div>
+											</form>	
+										</div>
+
+										<div class="tab-pane" id="left-icon-tab2">											
+											<form id="endUserContact" action="endUserLogin.html;jsessionid=094459D47288750E1270B46BA5226959.paamtomcat12?type=A" method="post">
+												<div class="light-bg">
+													<div class="panel-body">
+														<div class="row">
+														<p style="color:black;">
+														You can complete your pending application form or regenerate the acknowledgement receipt by login into the Register user module.
+														<!-- Added for CR# 54203:: To provide facility to enable and disable E-kyc and E-sign funtionality in Paam Fullform::start -->
+														<div><font color="red"></font></div>
+			<!-- Added for CR# 54203:: To provide facility to enable and disable E-kyc and E-sign funtionality in Paam Fullform::end -->
+														</p>
+															<div class="col-sm-4">
+																<div class="form-group">
+																	<label>Temporary Token Number</label>
+																	<input id="token_number" name="tokenNumber" onkeypress="return event.keyCode != 13;" class="form-control" type="text" value="" maxlength="10" autocomplete="off"/>
+																</div>
+															</div>
+
+															<div class="col-sm-4">
+																<div class="form-group">
+																	<label>E-mail ID</label>
+																	<input id="email_id1" name="emailId" onkeypress="return event.keyCode != 13;" name="email" class="form-control" type="text" value="" maxlength="40" autocomplete="off"/>
+																</div>
+															</div>
+															
+															<div class="col-sm-4">
+																<div class="form-group">
+																	<label>Date of Birth</label>
+																	
+																		
+																		<input id="dob" name="dateOfBirth" onkeypress="return event.keyCode != 13;" placeholder="DD/MM/YYYY" class="form-control daterange-single" type="text" value="" autocomplete="off"/>
+																		
+
+																
+																</div>
+															</div>
+															
+																<div class="col-sm-4">
+																<div class="form-group">
+																	<label>Captcha Code <span class="text-danger">*</span></label>
+																	<div class="input-group">
+																		<p> <img src="Captcha?0.5274833588553166" id="captchaImg" class="captcha-inter col-sm-8" />
+																		<i class="icon-rotate-cw2" id="Refresh"></i></p><br>
+																		<input id="captcha" name="captcha" onkeypress="return event.keyCode != 13;" class="form-control" type="text" value="" maxlength="5" autocomplete="off"/>
+																		
+																	</div>
+																</div>
+																</div>
+															
+															<div class="col-sm-12">
+																<div class="form-group">
+																	<button class="btn btn-default m-b-5" type="submit" disabled="disabled"><i class="icon-rotate-cw2" ></i> Resent Token</button>
+																	<p>If you have not received token on your registered email ID or lost token click on &quot;Resent Token&quot; button to resent token on your registered email ID.</p>												
+																</div>
+															</div>
+															
+															
+														</div>													
+													</div>
+												</div>											
+												<div class="tab-sub-head">												
+													<div class="text-left">
+														<button class="btn btn-primary" type="button" name="Reset" value="Reset" id="resetForm" >Reset</button> <button class="btn btn-primary" type="submit" name="reg" value="Submit" id="submitFormLogin" >Submit <i class="icon-arrow-right14 position-right"></i></button>
+													</div>										
+												</div>
+												
+											</form>
+										</div></div></div></div></div></div></div>
+				<!-- /TABS -->	
+			</div>
+			<!-- /main content -->
+		</div>
+		<!-- /page content -->
+	</div>
+	
+
+	<!-- /page container -->	
+	<!-- Footer -->
+	<div class="center m-b-0 back"><a href="#top" onclick="$('html,body').animate({scrollTop:0},'slow');return false;"><i class="icon-arrow-up-left2"></i></a></div>
+	<div class="footer text-muted">
+		Copyright &copy; 2016  |  NSDL e-Governance Infrastructure Limited (NSDL e-Gov ).<br/>Page last modified on: February 26, 2016 
+	</div>
+	<!-- /footer -->
+	
+	<script type="text/javascript" src="/paam/assets/js/plugins/loaders/pace.min.js;jsessionid=094459D47288750E1270B46BA5226959.paamtomcat12"></script>
+	<script type="text/javascript" src="/paam/assets/js/core/libraries/bootstrap.min.js;jsessionid=094459D47288750E1270B46BA5226959.paamtomcat12"></script>
+	<script type="text/javascript" src="/paam/assets/js/plugins/loaders/blockui.min.js;jsessionid=094459D47288750E1270B46BA5226959.paamtomcat12"></script>
+	<!-- /core JS files --><!-- Theme JS files -->
+	<script type="text/javascript" src="/paam/assets/js/plugins/ui/moment/moment.min.js;jsessionid=094459D47288750E1270B46BA5226959.paamtomcat12"></script>
+	<script type="text/javascript" src="/paam/assets/js/plugins/forms/wizards/stepy.min.js;jsessionid=094459D47288750E1270B46BA5226959.paamtomcat12"></script>
+	<script type="text/javascript" src="/paam/assets/js/plugins/forms/selects/select2.min.js;jsessionid=094459D47288750E1270B46BA5226959.paamtomcat12"></script>
+	<script type="text/javascript" src="/paam/assets/js/plugins/forms/styling/uniform.min.js;jsessionid=094459D47288750E1270B46BA5226959.paamtomcat12"></script>
+	<script type="text/javascript" src="/paam/assets/js/core/libraries/jasny_bootstrap.min.js;jsessionid=094459D47288750E1270B46BA5226959.paamtomcat12"></script>
+	<script type="text/javascript" src="/paam/assets/js/plugins/forms/validation/validate.min.js;jsessionid=094459D47288750E1270B46BA5226959.paamtomcat12"></script>
+	<script type="text/javascript" src="/paam/assets/js/plugins/pickers/daterangepicker.js;jsessionid=094459D47288750E1270B46BA5226959.paamtomcat12"></script>
+	<script type="text/javascript" src="/paam/assets/js/core/app.js;jsessionid=094459D47288750E1270B46BA5226959.paamtomcat12"></script>
+	<script type="text/javascript" src="/paam/assets/js/pages/wizard_stepy.js;jsessionid=094459D47288750E1270B46BA5226959.paamtomcat12"></script>
+	<script type="text/javascript" src="/paam/assets/js/pages/picker_date.js;jsessionid=094459D47288750E1270B46BA5226959.paamtomcat12"></script>
+
+	<!-- application js file -->
+
+
+</body>
+</html>
+
+		</div>
+	</div>
+	<div>
+		<div>
+		</div>
+	</div>
+
+</div>
+
+</body>
+</html>

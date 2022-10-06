@@ -1,0 +1,41 @@
+div{
+    border: 2px solid black;
+    margin: auto;
+    width: 195px;
+    border-radius: 10px;
+    background-image: linear-gradient(45deg, rgb(240, 25, 61), rgb(22, 26, 223));
+   /* background-image: linear-gradient(45deg, green,skyblue) */
+    /* opacity: ;yellowgreen; */
+}
+input{
+    text-align: center;
+    border: 2px solid black;
+    margin-left: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    height: 12px;
+}
+button{
+    width: 172px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+h5{
+    text-align: center;
+    /* margin-top: px; */
+    margin-bottom: 7px;
+    border-radius: 2px;
+    /* background-color: yellowgreen; */
+    width: 160px;
+    color: white;
+    margin: auto;
+    font-style: italic;
+}
+#last{
+    margin-bottom: 50px;
+}
+button:hover{
+    background-color: skyblue;
+    size: 10px;
+}

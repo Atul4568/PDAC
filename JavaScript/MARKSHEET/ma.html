@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum</title>
+    <script>
+        function getSum(){
+            var m1= document.getElementById("num1").value;
+            var m2= document.getElementById("num2").value;
+            var m3= document.getElementById("num3").value;
+            var m4= document.getElementById("num4").value;
+            var m5= document.getElementById("num5").value;
+            var sum = Number(m1) + Number(m2) + Number(m3) + Number(m4) + Number(m5);
+            document.getElementById("sn").innerHTML=sum;
+        }
+    </script>
+</head>
+<body>
+    English: <input id="num1" value=""/>
+    Math: <input id="num2" value=""/>
+    sci: <input id="num3" value=""/>
+    soc: <input id="num4" value=""/>
+    hin: <input id="num5" value=""/>
+    <br>
+    <br>
+    <button onclick="getSum()">submit</button>
+    total:<label id="sn" ></label>
+    <!-- total: <input id="sn" value="0"/> -->
+    <!-- <h1 id="sn" ></h1> -->
+
+
+</body>
+</html>

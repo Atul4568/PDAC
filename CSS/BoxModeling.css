@@ -1,0 +1,26 @@
+.main{
+background-color: bisque;
+height: 500px;
+width: 500px;
+text-align: center;
+margin: 80px;
+
+
+}
+.mai{
+background-color: bisque;
+height: 500px;
+width: 500px;
+text-align: center;
+margin: 80px;
+
+}
+.font{
+    font-size: 50px;
+    padding-top: 70px;
+    padding-left: 30px;
+}
+.ma{
+    display: flex;
+flex-wrap: wrap;
+}

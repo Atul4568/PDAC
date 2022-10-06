@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EMI CALCULATOR</title>
+    <style>
+        div{
+            margin: auto;
+            padding: auto;
+            text-align: center;
+        }
+        table{
+            margin: auto;
+            text-align: center;
+            border: 2px solid black;
+        }
+    </style>
+
+    <script>
+    function calcEMI() {
+        var P = Number(document.getElementById("p").value);
+        var R = Number(document.getElementById("r").value);
+        var N = Number(document.getElementById("n").value);
+
+        var SI = (P * R * N) / 100;
+        var MONTHS = N * 12;
+        var totalAmount = P + SI;
+        var EMI = totalAmount / MONTHS;
+
+        document.getElementById("emi").innerHTML = EMI;
+        document.getElementById("intrest").innerHTML = SI;
+        document.getElementById("months").innerHTML = MONTHS;
+    }
+    function resetData(){
+        document.getElementById("p").value = 0;
+document.getElementById("r").value = 0;
+document.getElementById("n").value = 0;
+document.getElementById("emi").innerHTML = 0;
+document.getElementById("intrest").innerHTML = 0;
+document.getElementById("months").innerHTML = 0;
+}
+    </script>
+    </head>
+    <body>
+    <span style="border: 2px black;">
+    <div style=" background-color: skyblue; margin: 60px 350px; padding: 1px 0px 2px 0px;">
+        <h1 style="border: 1px solid black; margin-left: 25px; margin-right:25px;">EMI CALCULATOR</h1>
+        <table style="border: 2px solid black;" >
+            <tr>
+                <td style="background-color: yellow;"><label>Principle Amount</label></td>
+                <td><input style="background-color: pink;" type="text" id="p" placeholder="Rs." /></td>
+            </tr>
+            <tr>
+                <td style="background-color: yellow;"><label>Rate of intrest</label></td>
+                <td><input style="background-color: pink;" type="text" id="r" placeholder="%" /></td>
+            </tr>
+            <tr>
+                <td style="background-color: yellow;"><label for="">Tenure</label></td>
+                <td><input style="background-color: pink;" type="text" id="n" placeholder="year" /></td>
+            </tr>
+        </table>
+        <br>
+        <td  >
+            <button style="align-self: center" onclick="calcEMI()">Calculate</button>
+            <button style="align-self: center" onclick="resetData()">Reset</button>
+            
+        </td>
+        <br>
+        <div style="border: 1px;">
+            <br>
+    <table border="2px">
+        <tr style="background-color: orange;">
+            <th>EMI</th>
+            <th>Intrest</th>
+            <th>Months</th>
+        </tr>
+        <tr style="background-color: white;">
+            <td style="background-color: pink;" id="emi">0</td>
+            <td style="background-color: pink;" id="intrest">0</td>
+            <td style="background-color: pink;" id="months">0</td>
+        </tr>
+    </table>
+    </div>
+</span>
+</body>
+</html>

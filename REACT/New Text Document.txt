@@ -1,0 +1,39 @@
+Article//
+
+import React,{useState} from "react";
+   
+    const [name,setName]=useState("");
+    const [data,setData]=useState([]);
+
+ <TextField label="Entre Article" variant="outlined" fullWidth onChange={(e)=> setName(e.target.value)} />
+  
+  <TextField label="Entre Article" variant="outlined" fullWidth onChange={(e)=> setName(e.target.value)} />
+
+  const handleAdd=()=>{
+    setData([...data,name])
+}
+
+
+{
+                    data.map(item=> <ArticleItem item={item}/>)
+                }
+xport const ArticleItem=({item})=>{
+    return(
+        <Grid item xs={3} >
+            <Card>
+                <CardContent>
+                    {item}
+                </CardContent>
+            </Card>
+        </Grid>
+    )
+}
+
+                    <TextField label="Entre Article" variant="outlined" fullWidth value={name} onChange={(e)=> setName(e.target.value)} />
+   
+
+const handleAdd=()=>{
+    if(name .trim() !=="")
+    setData([...data,name])
+    setName("")
+}

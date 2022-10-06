@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online PAN Application</title>
+    <style>
+        body {
+            font-family: "Roboto";
+            font-size: 13px;
+            line-height: 1.5384616;
+            color: #333;
+        }
+
+        nav {
+            /* background-color: orange; */
+            /* padding: 20px;
+            margin: 10px; */
+            font-size: 25px;
+            font-weight: bolder;
+            padding-left: 20px;
+            padding-right: 20px;
+            background-color: #f58f2d;
+            border-color: #f58f2d;
+        }
+
+        #div1 {
+            margin-left: 12px;
+            font-style: normal;
+            border-top-width: 2px;
+            border-color: #007790;
+            transition: all 0.2s;
+        }
+
+        #div2 {
+            background-color: rgb(205, 194, 181);
+            padding: 20px;
+            margin: 12px;
+        }
+
+        .cat1 {
+            margin-left: 95px;
+            /* font-size: 17px; */
+        }
+
+        hr {
+            /* background-color: solid black;
+            color: solid green;
+            font-size: 10px;
+            margin: 3px; */
+            border-width: 0;
+    height: 2px;
+    margin: 0 0 20px;
+    background: url(../images/blue-divider.jpg) top left no-repeat #047891;
+    border: 0;
+    border-top: 1px solid #ddd;
+        }
+
+        p {
+            margin: 10px;
+            padding: 10px;
+        }
+
+        #div3 {
+            font-family: "Roboto", Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 13px;
+            background-color: rgb(217, 207, 194);
+            padding: 20px;
+            margin: 12px;
+        }
+
+        label {
+            padding: 10px;
+        }
+
+        #op1 {
+            padding: 5px;
+            width: 210px;
+
+        }
+
+        #op2 {
+            padding: 5px;
+        }
+
+        input {
+            padding: 5px;
+        }
+
+        h1 {
+            display: block;
+            font-size: 25px;
+            margin-block-start: 0.67em;
+            margin-block-end: 0.67em;
+            margin-inline-start: 25px;
+            margin-inline-end: 0px;
+            font-weight: bold;
+        }
+        /* :hover div1{
+            background-color: red;
+
+        } */
+    </style>
+</head>
+
+<body>
+    <nav>Tax Information Network of Income Tax Department</nav>
+    <div>
+        <h1>Online PAN application</h1>
+        <p>As per ITD guidelines,'Request for New PAN Card or/and Changes or Correction in PAN Data' application is
+            presently to be <b><u>used only for update/correction in PAN database.</u></b> For procedure to link Aadhaar
+            with PAN,
+            please <a id="01" href="">click here</a>.</p>
+        <p>As per provisions of Section 272B of the Income Tax Act., 1961, a penalty of ₹ 10,000 can be levied on
+            possession of more than one PAN.</p>
+        <hr>
+        <div id="div1">
+            <button class="click1" style="background-color:  #037991; color: white; border-top-color: #353535; margin-left: 10px;
+            padding: 9px 12px; cursor: grab;">Apply
+                Online</button>
+            <button class="click" style="background: #00b2c9;
+            color: #fff; padding: 9px 12px; cursor: grab;">Registred User</button>
+        </div>
+    </div>
+    <div id="div2">
+        <label id="cat">Application Type*</label>
+        <label id="cat" class="cat1">Category*</label><br>
+        <select name="" id="op1">
+            <option value="">Select Application Type</option>
+            <option value="">New PAN - Indian Citizan (Form 49A)</option>
+            <option value="">New PAN - Foregin Citizan (Form 49AA)</option>
+            <option>Changes or Correction in existing PAN Data / Reprint of PAN Card (No Changes in existing
+                PAN Data)</option>
+        </select>
+        <select name="" id="op2">
+            <option value="">---Please Select---</option>
+            <option value="">INDIVIDUAL</option>
+            <option value="">ASSOCIATION OF PERSONS</option>
+            <option value="">BODY OF INDIVIDUALS</option>
+            <option value="">COMPANY</option>
+            <option value="">TRUST</option>
+            <option value="">LIMITED LIABILITY PARTNERSHIP</option>
+            <option value="">FIRM</option>
+            <option value="">GOVERNMENT</option>
+            <option value="">HINDU UNDIVIDED FAMILY</option>
+            <option value="">ARTIFICIAL JUDICIAL PERSON</option>
+            <option value="">LOCAL AUTHORITY</option>
+        </select>
+    </div>
+    <p id="p">Applicant information</p>
+    <div id="div3">
+        <label for="">Title*</label><br>
+        <input type="text"><br>
+        <label for="">Last Name / Surname*</label>
+        <label style="margin-left: 23px;" id="lb1" for="">First Name</label>
+        <label style="margin-left: 92px;" id="lb2" for="">Middle Name</label><br>
+        <input id="" type="text" placeholder="Last Name / Surname">
+        <input type="text" placeholder="First Name">
+        <input type="text" placeholder="Middle Name"><br>
+
+        <label style="" for="">Date of Birth(DD/MM/YYYY)</label>
+        <label style="margin-left: -10px;" for="">Email ID*</label>
+        <label style="margin-left: 105px;" for="">Mobile Number*</label><br>
+        <input style="width: 161px;" id="ip5" type="date"
+            placeholder="Date of Birth / Incorporation / Formation (DD/MM/YYYY)">
+        <input style="margin-left:1px;" id="ip6" type="email" placeholder="Email ID">
+        <input id="ip7" type="tel" placeholder="Mobile Number"><br>
+        <input style="display: inline;" type="checkbox">
+        <p style="margin-left: 12px; margin-top: -29px;"> By submitting data to us and/or using our NSDL e-Gov TIN web
+            site <a href="https://www.onlineservices.nsdl.com/paam/endUserRegisterContact.html"></a>
+            you give your consent that all personal
+            data/information that you submit to avail tax related services from NSDL e-Governance Infrastructure Limited
+            may be received, stored, processed, transmitted and or made available for view /use as mandated by law or
+            otherwise, shall be dealt with by us in the manner and for the purposes specified / as described in the
+            privacy policy or as mandated by law.</p>
+        <label for="">Captcha Code *</label> <br>
+        <img src="./CaptchaEndUser.png" alt=""><br>
+        <input type="text" placeholder="Captcha code">
+    </div>
+    <div }" id="div1">
+        <button class="click" style="background-color: #007790;color: #fff; padding: 7px 12px;
+        font-size: 13px; margin-left: 20px;
+        line-height: 1.5384616;">Reset</button>
+        <button class="click" onclick="submit()" style="background-color: #007790;color: #fff; padding: 7px 12px;
+        font-size: 13px; line-height: 1.5384616; cursor: grab;">Submit</button>
+    </div>
+        <script>
+            function submit(){
+                alert ("Form Submitted Sucessfully")
+            }
+        </script>
+</body>
+
+</html>

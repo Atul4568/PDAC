@@ -1,0 +1,8 @@
+atul tingre balajirao
+Full Stack development
+<p> - opening tag
+i am ok - content
+</p> - closing tag
+<p>I am ok</p>
+atmy scriptingg
+

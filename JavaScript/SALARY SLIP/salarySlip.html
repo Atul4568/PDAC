@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div1{
+            margin: auto;
+            display: flex;
+        }
+        table{
+            border: 2px solid black;
+            border-collapse: collapse;
+            margin: auto;
+            padding: 2px;
+        }
+        th,td{
+            border: 1px solid black;
+        }
+        th{
+            text-align: left;
+        }
+        td{
+            text-align: center;
+        }
+        #tr1{
+            background-color: skyblue;
+        }
+        #tr3,#tr5,#tr7{
+            background-color:  goldenrod;
+        }
+        .tr8{
+            background-color:grey;
+        }
+        button:hover{
+            background-color: blueviolet;
+            color: white;
+        }
+        #e1,#e2{
+            text-align: center;
+        }
+    </style>
+    <script>
+        function generateSal(){
+            var basicSal = document.getElementById("txtbasic").value;
+            var basicSal = Number(basicSal);
+            document.getElementById("bp").innerHTML=basicSal;
+            var DA = basicSal * 0.5;
+            var CA = basicSal * 0.2;
+            var MA = basicSal * 0.15;
+            var HRA = basicSal *0.4;
+            var FA = 600;
+            var netSal = basicSal + DA + CA + MA + HRA + FA;
+            // var netSal= basicSal + DA + CA + MA + HRA + FA;
+            document.getElementById("da").innerHTML= DA;
+            document.getElementById("ca").innerHTML= CA;
+            document.getElementById("ma").innerHTML= MA;
+            document.getElementById("hra").innerHTML= HRA;
+            document.getElementById("fa").innerHTML= FA;
+            document.getElementById("te").innerHTML= netSal;
+        }
+        
+    </script>
+</head>
+<body>
+        <div id="div1">
+            <center>
+        <input id="txtbasic" type="text" placeholder="Basic Pay">
+        <button onclick="generateSal()">Generate</button>
+        <button onclick="reserData()">Reset</button>
+        <br><br>
+        <table>
+            <tr id="tr1">
+                <th id="e1">Earning</th>
+                <th id="e2">Amount</th>
+            </tr>
+            <tr>
+                <th>Basic Pay</th>
+                <td id="bp">0</td>
+            </tr>
+            <tr id="tr3">
+                <th>Dearness Allowance</th>
+                <td id="da">0</td>
+            </tr>
+            <tr>
+                <th>Conveyance Allowance</th>
+                <td id="ca">0</td>
+            </tr>
+            <tr id="tr5">
+                <th>Medical Allowance</th>
+                <td id="ma">0</td>
+            </tr>
+            <tr>
+                <th>House Rent Allowance</th>
+                <td id="hra">0</td>
+            </tr>
+            <tr id="tr7">
+                <th>Food Aallowance</th>
+                <td id="fa">0</td>
+            </tr>
+            <tr class="tr8">
+                <th>Total Earning</th>
+                <td id="te">0</td>
+            </tr>
+        </table>
+    </center>
+    </div>
+</body>
+</html>

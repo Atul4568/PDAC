@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        $(function() {
+  var TotalValue = 0;
+  $("tr #data").each(function(index, value) {
+    currentRow = parseFloat($(this).text());
+    TotalValue += currentRow
+  });
+
+  document.getElementById('fulltotal').innerHTML = TotalValue;
+  var TotalValue1 = 0;
+  
+  $("tr #data1").each(function(index, value) {
+    currentRow = parseFloat($(this).text());
+    TotalValue1 += currentRow
+  });
+
+  document.getElementById('passtotal').innerHTML = TotalValue1;
+  var TotalValue2 = 0;
+  $("tr #data2").each(function(index, value) {
+    currentRow = parseFloat($(this).text());
+    TotalValue2 += currentRow
+  });
+
+  document.getElementById('obtotal').innerHTML = TotalValue2;
+});
+
+var ptotal = $("#passtotal").val();
+var ototal = $("#obtotal").val();
+if (ptotal > ototal) {
+  document.getElementById('results').innerHTML = "FAIL";
+} else {
+  document.getElementById('results').innerHTML = "PASS";
+}
+    </script>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Code</th>
+                <th>Subject / Course Title</th>
+                <th>Maximum Marks</th>
+                <th>Pass Marks</th>
+                <th>Marks Awarded</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="body-data">
+                <td>1</td>
+                <td>maths<td>
+                <td id="data">100</td>
+                <td id="data1">33</td>
+                <td id="data2">54</td>
+            </tr>
+            <tr class="body-data">
+                <td>2</td>
+                <td>english<td>
+                <td id="data">100</td>
+                <td id="data1">33</td>
+                <td id="data2">12</td>
+            </tr>
+            <tr class="body-data">
+                <td>3</td>
+                <td>science<td>
+                <td id="data">100</td>
+                <td id="data1">33</td>
+                <td id="data2">74</td>
+            </tr>
+            <tr class="body-data">
+                <td>4</td>
+                <td>social science<td>
+                <td id="data">100</td>
+                <td id="data1">33</td>
+                <td id="data2">0</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr class="total-data">
+                <td></td>
+                <td style="text-align: right; padding-right: 10px;">TOTAL </td>
+                <td style="border-top: 2px solid #2193b0!important;" id="fulltotal"></td>
+                <td style="border-top: 2px solid #2193b0!important;" id="passtotal"></td>
+                <td style="border-top: 2px solid #2193b0!important;" id="obtotal"></td>
+            </tr>
+        </tfoot>
+        </table>
+</body>
+</html>

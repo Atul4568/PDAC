@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: fit-content;
+            border: 2px solid black;
+            margin: auto;
+            width: 570px;
+            text-align: center;
+            padding-left: 20px;
+            padding-bottom: 20px;
+        }
+        .leb1{
+            text-align: left;
+        }
+        .div2,.div1{
+            margin: auto;
+            /* width: fit-content; */
+            padding-top: 20px;
+            padding-left: 80px;
+            text-align: center;
+            background-color: aqua;
+        }
+        button{
+            align-self: center;
+        }
+    </style>
+    <script>
+        // function getSum(){
+        //     var m1= document.getElementById("eng").value;
+        //     var m2= document.getElementById("math").value;
+        //     var m3= document.getElementById("sci").value;
+        //     var m4= document.getElementById("soc").value;
+        //     var m5= document.getElementById("hin").value;
+        //     // var sum= document.getElementById("sn").value;
+        //     var sum = Number(m1) + Number(m2) + Number(m3) + Number(m4) + Number(m5);
+        //     document.getElementById("sn").innerHTML=sum;
+        // }
+
+        function getSum(){
+            var m1= document.getElementById("num1").value;
+            var m2= document.getElementById("num2").value;
+            var m3= document.getElementById("num3").value;
+            var m4= document.getElementById("num4").value;
+            var m5= document.getElementById("num5").value;
+            var sum = Number(m1) + Number(m2) + Number(m3) + Number(m4) + Number(m5);
+            document.getElementById("sn").innerHTML=sum;
+            var sum = document.getElementById("sn").innerHTML;
+
+            var per = sum / 5;
+            document.getElementById("per").innerHTML= per;
+
+            // // document.getElementById("sn").value= document.getElementById("num1").value + document.getElementById("num2").value + document.getElementById("num3").value+ document.getElementById("num4").value+ document.getElementById("num5").value;
+            // document.getElementById("sn").innerHTML= document.getElementById("num1").innerHTML + document.getElementById("num2").innerHTML + document.getElementById("num3").innerHTML+ document.getElementById("num4").innerHTML+ document.getElementById("num5").innerHTML;
+
+            // var sum = Number("num1") + Number("num2") + Number("num3") + Number("num4") + Number("num5");
+            // document.getElementById("sn").value=sum;
+            // // var sum = document.getElementById("sn").innerHTML;
+
+            // var per = sum / 5;
+            // document.getElementById("per").innerHTML= per;
+
+            // // const ENG = parseInt(prompt('num1'));
+            // // const MATH = parseInt(prompt('num2'));
+            // // const SCI = parseInt(prompt('num3'));
+            // // const SOC = parseInt(prompt('num4'));
+            // // const HIN = parseInt(prompt('num5'));
+            // // const sn = parseInt(prompt('sn'));
+
+            // // const sn = num1 + num + SCI + SOC + HIN;
+
+            // // var m1= document.getElementById("num1").value;
+            // // var m2= document.getElementById("num2").value;
+            // // var m3= document.getElementById("num3").value;
+            // // var m4= document.getElementById("num4").value;
+            // // var m5= document.getElementById("num5").value;
+
+            // // var sum = m1 + m2 + m3 + m4 + m5;
+            // // document.getElementById("num1").innerHTML= m1;
+            // // document.getElementById("num2").innerHTML= m2;
+            // // document.getElementById("num3").innerHTML= m3;
+            // // document.getElementById("num4").innerHTML= m4;
+            // // document.getElementById("num5").innerHTML= m5;
+            // // document.getElementById("sn").innerHTML= sum;
+        }
+    </script>
+</head>
+<body>
+    <br>
+    <br>
+    
+    <div class="div2">
+        <h1>Marksheet</h1>
+        <form action="">
+            <table>
+                <tr>
+                    <td><label for="">Name:</label></td>
+                    <td><input type="text"/></td>
+                    
+                    <td><label for="">Divison:</label></td>
+                    <td><input type="text"/></td>
+                </tr>
+                <tr>
+                    <td><label for="">Class:</label></td>
+                    <td><input type="text"/></td>
+                    
+                    <td><label for="">Seat No:</label></td>
+                    <td><input type="text"/></td>
+                </tr>
+                <br>
+            <!-- </table>
+        </div>
+        <br>
+        <div class="div2">
+            <table> -->
+                <tr>
+                    <th><label for="">Subject</label></th>
+                    <th><label for="">Max. Marks</label></th>
+                    <th><label for="">Marks Obtained</label></th>
+                </tr>
+                <tr>
+                    <th class="leb1"><label for="">English</label></th>
+                    <th><label for="">100</label></th>
+                    <td><input id="num1" value=""/></td>
+                </tr>
+                <tr>
+                    <th class="leb1"><label for="">Mathmatics</label></th>
+                    <th><label for="">100</label></th>
+                    <td><input id="num2" value=""/></td>
+                </tr>
+                <tr>
+                    <th class="leb1"><label for="">Science</label></th>
+                    <th><label for="">100</label></th>
+                    <td><input id="num3" value=""/></td>
+                </tr>
+                <tr>
+                    <th class="leb1"><label for="">Social Science</label></th>
+                    <th><label for="">100</label></th>
+                    <td><input id="num4" value=""/></td>
+                </tr>
+                <tr>
+                    <th class="leb1"><label for="">Hindi</label></th>
+                    <th><label for="">100</label></th>
+                    <td><input id="num5" value=""/></td>
+                </tr>
+                <tr>
+                    <th><label for="">Total</label></th>
+                    <th><label for="">500</label></th>
+                    <td><label id="sn" value="" >0</label></td>
+                    <tr>
+                    <th><label for="">Percentage</label></th>
+                    <th><label for="">100%</label></th>
+                    <td><label id="per" value="" >0</label></td>
+                </tr>
+                <tr>
+                    <td>
+
+                    </td>
+                </tr>
+                <tr style="border: none; align: center;">
+                    <td><button onclick="return getSum()">submit</button></td>
+                    <td><button onclick="getSum()">Reset</button></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

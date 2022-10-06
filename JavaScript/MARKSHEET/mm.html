@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        body{
+            background-color: brown;
+            background-color: grey;
+        }
+        #box1{
+            margin-top: 100px;
+            margin-left:  350px;
+            border: 2px solid black;
+            height: 450px;
+            width: 700px;
+            text-align: center;
+            background-image: linear-gradient(45deg, green,skyblue);
+            box-shadow:  5px 10px 15px black;
+            border: none;
+        }
+        #box2{
+            margin-left:  350px;
+            border: 1px solid black;
+        }
+        table{
+            width: 500px;
+            height: 100px;
+            border: 1px solid black;
+            margin-left: 95px;
+            border-collapse: collapse;
+            background-color: white;
+        }
+        tr{
+            border: 1px solid black;
+        }
+
+        td{
+            border: 1px solid black;
+        }
+        th{
+            border: 1px solid black;
+        }
+        hr{
+            border: 3px solid rgba(195, 30, 30, 0.479);
+            
+
+        }
+        header{
+            background-color: rgb(228, 253, 6);
+        }
+        button{
+            background-color: rgb(32, 49, 178);
+            color: white;
+            height: 25px;
+            width: 100px;
+        }
+        #tr1{
+            color: white;
+            background-color: rgba(8, 8, 212, 0.637);
+            height: 40px;
+        }
+        #tr2{
+            background-color: wheat;
+            border: none;
+            width: 100px;
+            height: 40px;
+            margin-left: 300px;
+        }
+       
+
+    </style>
+    <script>
+        function calcMarks(){
+            var TOT = Number(document.getElementById("tot").value)
+            var ENG= Number(document.getElementById("eng").value)
+            var MATH= Number(document.getElementById("math").value)
+            var SCI= Number(document.getElementById("sci").value)
+            var SOCS= Number(document.getElementById("socs").value)
+            var HINDI= Number(document.getElementById("hindi").value)
+
+            var TOT = ENG+MATH+SCI+SOCS+HINDI;
+            var PER = (TOT/5)+ "%";
+            document.getElementById("tot").innerHTML= TOT;
+            document.getElementById("per").innerHTML=PER;
+        }
+        function resetData(){
+        document.getElementById("tot").value = 0;
+document.getElementById("eng").value = 0;
+document.getElementById("math").value = 0;
+document.getElementById("sci").value = 0;
+document.getElementById("socs").value = 0;
+document.getElementById("hindi").value = 0;
+document.getElementById("name").value = " ";
+document.getElementById("div").value = " ";
+document.getElementById("class").value = " ";
+document.getElementById("seat").value = " ";
+
+document.getElementById("sci").innerHTML = 0;
+document.getElementById("socs").innerHTML = 0;
+document.getElementById("hindi").innerHTML = 0;
+document.getElementById("tot").innerHTML= 0;
+document.getElementById("per").innerHTML=0;
+}
+    </script>
+    <script>
+        function getAndUpdate(){
+                console.log("Updating List...");
+                tit = document.getElementById('title').value;
+                desc = document.getElementById('description').value;
+                TOT = document.getElementById("tot").value;
+                ENG= Number(document.getElementById("eng").value;
+                if (localStorage.getItem('itemsJson')==null){
+                    itemJsonArray = [];
+                    itemJsonArray.push([tot, eng]);
+                    localStorage.setItem('itemsJson', JSON.stringify(itemJsonArray))
+                }
+                else{
+                    itemJsonArrayStr = localStorage.getItem('itemsJson')
+                    itemJsonArray = JSON.parse(itemJsonArrayStr);
+                    itemJsonArray.push([tit, desc]);
+                    localStorage.setItem('itemsJson', JSON.stringify(itemJsonArray))
+                }
+                update();
+            }
+
+            function update(){
+                if (localStorage.getItem('itemsJson')==null){
+                    itemJsonArray = []; 
+                    localStorage.setItem('itemsJson', JSON.stringify(itemJsonArray))
+                } 
+                else{
+                    itemJsonArrayStr = localStorage.getItem('itemsJson')
+                    itemJsonArray = JSON.parse(itemJsonArrayStr); 
+                }
+                // Populate the table
+                let tableBody = document.getElementById("tableBody");
+                let str = "";
+                itemJsonArray.forEach((element, index) => {
+                    str += `
+                    <tr>
+                    <th scope="row">${index + 1}</th>
+                    <td>${element[0]}</td>
+                    <td>${element[1]}</td> 
+                    <td><button class="btn btn-sm btn-primary" onclick="deleted(${index})">Delete</button></td> 
+                    </tr>`; 
+                });
+                tableBody.innerHTML = str;
+            }
+        add = document.getElementById("add");
+        document.getElementById("tot");
+        document.getElementById("eng");
+            add.addEventListener("click", getAndUpdate);
+            update();
+            var TOT = Number(.value)
+            var ENG= Number(.value)
+            var MATH= Number(document.getElementById("math").value)
+            var SCI= Number(document.getElementById("sci").value)
+            var SOCS= Number(document.getElementById("socs").value)
+            var HINDI= Number(document.getElementById("hindi").value)
+            function deleted(itemIndex){
+                console.log("Delete", itemIndex);
+                itemJsonArrayStr = localStorage.getItem('itemsJson')
+                itemJsonArray = JSON.parse(itemJsonArrayStr);
+                // Delete itemIndex element from the array
+                itemJsonArray.splice(itemIndex, 1);
+                localStorage.setItem('itemsJson', JSON.stringify(itemJsonArray));
+                update();
+
+            }
+            function clearStorage(){
+                if (confirm("Do you areally want to clear?")){
+                console.log('Clearing the storage')
+                localStorage.clear();
+                update()
+                }
+            }
+    </script>
+</head>
+<body>
+    <div id="box1">
+        <header>
+            <h1><i>Marksheet</i> </h1>
+        </header>
+        <form>
+        <b>Name</b>  <input id="name" type="text" placeholder="Enter Candidate Name">
+        <b>Division</b>  <input id="div" type="text" placeholder="Enter Division">
+        <br><br>
+        <b>Class</b>  <input id="class" type="text" placeholder="Enter Class"> 
+        <b>SeatNo.</b><input id="seat" type="text" placeholder="Enter Seat No.">
+        <hr>
+        </form>
+
+        <table>
+            <tr>
+                <th>English</th>
+                <td>100</td>
+                <td > <input id="eng" type="text"></td>
+            </tr>
+            <tr>
+                <th>Math</th>
+                <td>100</td>
+                <td> <input id="math" type="text"></td>
+            </tr>
+            <tr>
+                <th>Sci</th>
+                <td>100</td>
+                <td> <input id="sci" type="text"></td>
+            </tr>
+            <tr>
+                <th>Soc Sci</th>
+                <td>100</td>
+                <td> <input id="socs" type="text"></td>
+            </tr>
+            <tr>
+                <th>Hindi</th>
+                <td>100</td>
+                <td> <input id="hindi" type="text"></td>
+            </tr>
+            <tr id="tr1">
+                <th>Total</th>
+                <td>500</td>
+                <td id="tot">0</td>
+            </tr>
+            <br>
+        </table>
+        <footer>
+            <table id="tr2">
+            <tr>
+                <th>Percentage</th>
+                <td id="per">0</td>
+            </tr>
+            </table>
+            <br>
+            <br>
+            <button onclick="calcMarks()">Submit</button>
+            <button onclick="resetData()">Reset</button>
+
+    </footer>
+    
+    
+
+    
+</body>
+</html>

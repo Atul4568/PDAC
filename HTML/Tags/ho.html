@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container1 {
+        border: 2px solid black;
+        width: 400px;
+        height: 400px;
+        position: absolute;
+        margin-left: 200px;
+        }
+        .box {
+        height: 100px;
+        width: 100px;
+        border: 1px solid black;
+        position: absolute;
+        }
+        #box11{
+          position: absolute;
+          top: 0px;
+          left: 0px;
+    }
+      #box22{
+        position: absolute;
+        top: 0px;
+        right: 0px;
+      }
+      #box33{
+          position: absolute;
+          bottom: 0px;
+          left: 0px;
+        }
+        #box44{
+          position: absolute;
+          bottom: 0px;
+          right: 0px;
+        }
+        #box11:hover{
+            background:
+            conic-gradient(from  190deg,#fff 0 90deg, #fff0 0) top left,
+            conic-gradient(from  190deg,#000 0 90deg, #fff0 0) top left,
+            /* conic-gradient(            rgb(255, 255, 255) 0 90deg, #fff0 0) bottom left, */
+            -webkit-background-clip:text,padding-box;
+          background-clip:text,padding-box;
+          background-size: 100px 100px;
+  transition: 0.5s;
+         
+        }
+        #box11:hover{
+            background-position: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container1">
+        <div id="box11" class="box">1</div>
+        <div id="box22" class="box">2</div>
+        <div id="box33" class="box">3</div>
+        <div id="box44" class="box">4</div>
+      </div>
+</body>
+</html>

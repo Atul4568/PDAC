@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atul Fitness</title>
+    
+    
+</head>
+<link rel="stylesheet" href="./CSS/style.css">
+<style>
+    /* css Reset */
+    body{
+        margin: 0px;
+        padding: 0px;
+        background: url('./pexels-scott-webb-136409.jpg');
+        color: white;
+    }
+    .left{
+border: 2px solid red;
+display: inline-block;
+position: absolute;
+left: 32px;
+top: 20px;
+    }
+    .left img{
+        width: 136px;
+    }
+    .left div{
+        text-align: center;
+    }
+    div .mid{
+border: 2px solid gold;
+display: inline-block;
+margin: 20px auto;
+top:20px;
+    }
+    .right{
+border: 2px solid greenyellow;
+display: inline-block;
+position: absolute;
+right: 32px;
+top: 20px;
+    }
+    .navbar{
+        display: inline-block;
+    }
+    .navbar li{
+        display: inline-block;
+        font-size: 25px;
+    }
+    .navbar li a{
+        color: white;
+        text-decoration: none;
+        padding: 34px 23px;
+    }
+    .navbar li a:hover .navbar li a:active {
+        color: white;
+        text-decoration: none;
+        padding: 34px 23px;
+    }
+</style>
+<body>
+    <header class="header">
+        <!-- left box for logo -->
+        <div class="left">
+            <img src="./429d631659a11a9eb666b103d811470a.jpg" alt="">
+            <div>Atul Fitness</div>
+        </div>
+        <!-- mid box for navbar -->
+        <div class="mid" >
+            <ul class="navbar">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#" class="active">About</a></li>
+                <li><a href="#" class="active">Fitness</a></li>
+                <li><a href="#" class="active">Contact Us</a></li>
+            </ul>
+        </div>
+        <!-- Right box for button -->
+        <div class="right">
+            <button class="btn">Call Us</button>
+            <button class="btn">Email</button>        </div>
+    </header>
+</body>
+</html>

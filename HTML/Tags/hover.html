@@ -1,0 +1,177 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+              #div0{
+                  position: relative;
+                  height: 600px;
+                  width: 600px;
+                  border: 2px solid black;
+                  text-align: center;
+
+              }
+              #a1{
+                  position: absolute;
+                  height: 100px;
+                  width: 100px;
+                  border: 2px solid black;
+                  text-align: center;
+
+              }
+              .div1{
+                  position: absolute;
+                  top: 0px;
+                  left: 0px;
+                  background-color: yellowgreen;
+              }
+              .div2{
+                  position: absolute;
+                  top: 0px;
+                  right: 0px;
+                  background-color: aquamarine;
+              }
+              .div3{
+                  position: absolute;
+                  bottom: 0px;
+                  left: 0px;
+                  background-color: blue;
+                  color: white;
+              }
+              .div4{
+                  position: absolute;
+                  bottom: 0px;
+                  right: 0px;
+                  color: white;
+                  background-color: black;
+              }
+            .div4:hover{
+        background:
+          conic-gradient(            #fff 0 90deg, #fff0 0) bottom left,
+          conic-gradient(            rgb(2, 2, 2) 0 90deg, #fff0 0) bottom left,
+          conic-gradient(from  90deg,#fff 0 90deg, #fff0 0) top left,
+          conic-gradient(from  180deg,rgb(0, 0, 0) 0 90deg, #fff0 0) top left,
+          conic-gradient(from 180deg,#fff 0 90deg, #fff0 0) top right,
+          conic-gradient(from 180deg,rgb(0, 0, 0) 0 90deg, #fff0 0) top right,
+          conic-gradient(from -90deg,#fff 0 90deg, #fff0 0) bottom right,
+          conic-gradient(from -90deg,rgb(0, 0, 0) 0 90deg, #fff0 0) bottom right,
+          #000;
+        -webkit-background-clip:text,padding-box;
+                background-clip:text,padding-box;
+        background-size: 150px 150px;
+        transition: 0.5s;
+      }
+      .div4:hover {
+        background-position: center;
+       }
+
+    </style>
+  </head>
+  <body>
+    <div id="div0">
+      <div class="div1" id="a1">A</div>
+      <div class="div2" id="a1">B</div>
+      <div class="div3" id="a1">C</div>
+      <div class="div4" id="a1">D</div>
+    </div>
+  </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      
+ #div1{
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+ }
+ #div1:hover{
+    background:
+    /* conic-gradient(from  90deg,#fff 0 90deg, #fff0 0) top left, */
+    conic-gradient(from  90deg,#000 0 90deg, #fff0 0) top left,
+    /* conic-gradient(from -90deg,#fff 0 90deg, #fff0 0) bottom right, */
+    conic-gradient(from -90deg,#000 0 90deg, #fff0 0) bottom right,
+
+    #000;
+  -webkit-background-clip:text,padding-box;
+          background-clip:text,padding-box;
+  background-size: 100px 100px;
+  transition: 0.5s;
+ }
+ #div2{
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+ }
+ #div2:hover{
+    background:
+    conic-gradient(from 180deg,#fff 0 90deg, #fff0 0) top right,
+    conic-gradient(from 180deg,#000 0 90deg, #fff0 0) top right,
+
+    #000;
+  -webkit-background-clip:text,padding-box;
+          background-clip:text,padding-box;
+  background-size: 100px 100px;
+  transition: 0.5s;
+ }
+ #div3{
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+ }
+ #div3:hover{
+    background:
+    conic-gradient(from  90deg,#fff 0 90deg, #fff0 0) top left,
+    conic-gradient(from  90deg,#000 0 90deg, #fff0 0) top left,
+    #000;
+  -webkit-background-clip:text,padding-box;
+          background-clip:text,padding-box;
+  background-size: 100px 100px;
+  transition: 0.5s;
+ }
+ #div4{
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+ }
+ #div0:hover{
+        background:
+          conic-gradient(            #fff 0 90deg, #fff0 0) bottom left,
+          conic-gradient(            rgb(2, 2, 2) 0 90deg, #fff0 0) bottom left,
+          conic-gradient(from  90deg,#fff 0 90deg, #fff0 0) top left,
+          conic-gradient(from  180deg,rgb(0, 0, 0) 0 90deg, #fff0 0) top left,
+          conic-gradient(from 180deg,#fff 0 90deg, #fff0 0) top right,
+          conic-gradient(from 180deg,rgb(0, 0, 0) 0 90deg, #fff0 0) top right,
+          conic-gradient(from -90deg,#fff 0 90deg, #fff0 0) bottom right,
+          conic-gradient(from -90deg,rgb(0, 0, 0) 0 90deg, #fff0 0) bottom right,
+          #000;
+        /* -webkit-background-clip:text,padding-box;
+                background-clip:text,padding-box; */
+        background-size:  600px;
+        transition: 0.5s;
+      }
+      #div0:hover {
+        background-position: center;
+       }
+ </style>
+</head>
+<body>
+    <div class="inverted-6" style="height: 400px; width:400px; border: 2px solid black">
+        <div id="div0" >
+            <div class="inverted-6" id="div1">a</div>
+            <div class="inverted-6" id="div2">B</div>
+            <div class="inverted-6" id="div3">c</div>
+            <div class="inverted-6" id="div4">d</div>
+        </div>
+    </div>
+</body>
+</html>
