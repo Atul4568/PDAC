@@ -1,51 +1,38 @@
-import React from 'react'
+    import React,{useState,useEffect} from "react";
+    import { Grid,Button } from "@mui/material";
 
-const Pagination = ({ nPages, currentPage, setCurrentPage }) => {
+    export const Pagination=({showPerPage,onPaginationChange})=>{
 
-    const pageNumbers = [...Array(nPages + 1).keys()].slice(1)
 
-    
+        const[counter,setCounter]=useState(1);
 
-    const nextPage = () => {
-            if(currentPage !== nPages) setCurrentPage(currentPage + 1)
+        useEffect(()=>{
+    const value= showPerPage * counter ;
+    onPaginationChange (value - showPerPage, value)
+
+        },[counter]);
+
+        const onButtonClick=(type)=>{
+    if (type==='prev'){
+        if (counter===1){
+            setCounter(1)
+        }else{
+            setCounter(counter-1)
+        }
+    }else if (type==='next'){
+    setCounter(counter+1)
     }
-    const prevPage = () => {
-        if(currentPage !== 1) setCurrentPage(currentPage - 1)
-    }
-    return (
-        <nav>
-            <ul className='pagination justify-content-center'>
-                <li className="page-item">
-                    <a className="page-link" 
-                        onClick={prevPage} 
-                        href='#'>
-                        
-                        Previous
-                    </a>
-                </li>
-                {pageNumbers.map(pgNumber => (
-                    <li key={pgNumber} 
-                        className= {`page-item ${currentPage == pgNumber ? 'active' : ''} `} >
-
-                        <a onClick={() => setCurrentPage(pgNumber)}  
-                            className='page-link' 
-                            href='#'>
-                            
-                            {pgNumber}
-                        </a>
-                    </li>
-                ))}
-                <li className="page-item">
-                    <a className="page-link" 
-                        onClick={nextPage}
-                        href='#'>
-                        
-                        Next
-                    </a>
-                </li>
-            </ul>
-        </nav>
+        }
+    return(
+        
+        <Grid sx={{margin:"10px"}}>
+            <div className="d-flex justify-content-between">
+            <Button variant="contained" onClick={()=>onButtonClick('prev')} 
+            className="btn btn-primary">Previous</Button>
+            <Button variant="contained" onClick={()=>onButtonClick('next')} 
+            className="btn btn-primary">Next</Button>
+        
+        </div>
+        </Grid>  
     )
-}
-
-export default Pagination
+    }

@@ -2,6 +2,7 @@ import React,{useState,useEffect} from "react";
 import { Grid, TextField,Rating, Button} from "@mui/material";
 import {ProductItem} from"./ProductItem";
 import axios from "axios";
+import { Pagination } from "../pagination/Pagination";
 
 export const ProductList=()=>{
     const [data,setData]=useState([]);
@@ -10,6 +11,10 @@ export const ProductList=()=>{
     const [txt,setTxt]=useState("");
     const [cat,setCat]=useState("");
     const [rate,setRate]=useState(0);
+    const [showPerPage, setshowPerPage] = useState(10);
+    const [pagination, setPagination] = useState({start: 0, end: showPerPage});
+
+    const onPaginationChange = (start, end) => {setPagination({ start: start, end: end });};
 
     const getData= async ()=>{
         const result= await axios.get("https://fakestoreapi.com/products");
@@ -58,11 +63,12 @@ export const ProductList=()=>{
                         )
                 }
             {
-                filtData.map(item=>
+                filtData.slice(pagination.start, pagination.end).map(item=>
                     <ProductItem item={item}/>
                     )
                 }
                 </Grid>
+                <Pagination showPerPage={showPerPage} onPaginationChange={onPaginationChange}/>
         </div>
     )
 }

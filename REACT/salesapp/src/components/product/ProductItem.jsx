@@ -3,7 +3,7 @@ import { Grid,Card,CardContent,Rating } from "@mui/material";
 
 export const ProductItem=({item})=>{
     return(
-        <Grid item xs={3}>
+        <Grid item xs={2.4}>
             <Card className="CardProduct" sx={{bgcolor:"lightyellow", color: "black", borderRadius:"20px 0px 20px 0px", border:"2px solid black"}} >
                 <CardContent>
                     <center><img src={item.image} alt="" style={{height: "200px", width: "200px"}} /></center>
