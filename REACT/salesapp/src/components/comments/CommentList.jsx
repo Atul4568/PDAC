@@ -20,9 +20,6 @@ export const CommentList=()=>{
         fetchComments();
 
     },[]); 
-    
-
-
 
     const getData= async ()=>{
         const result = await axios.get("https://jsonplaceholder.typicode.com/comments")
