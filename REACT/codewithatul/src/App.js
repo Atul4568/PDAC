@@ -1,3 +1,4 @@
+import { Atul } from "./components/New Project/Atul";
 import"./Yasin sir/common.css";
 // import { Full } from "./Yasin sir/Full";/
 // import {Todo} from"./Yasin sir/Todo";
@@ -18,11 +19,12 @@ function App() {
       {/* <Counte/> */}
       {/* <Todoo/> */}
       {/* <ColortoBall/> */}
-      <FullName/>
+      {/* <FullName/> */}
       {/* <Full/> */}
       {/* <Count/> */}
       {/* <Toodo/> */}
       {/* <Todooo/> */}
+      <Atul/>
     </div>
   );
 };

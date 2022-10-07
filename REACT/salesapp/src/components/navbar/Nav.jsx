@@ -30,13 +30,7 @@ export const Nav=()=>{
                         <Link to="/Comment">Comment</Link>
                     </Grid>
                     <Grid item xs={1}>
-                        <Link to="/Post">Posts</Link>
-                    </Grid>
-                    <Grid item xs={1}>
-                        <Link to="/Olympic">Olympic</Link>
-                    </Grid>
-                    <Grid item xs={1}>
-                        <Link to="/Photo">Photo</Link>
+                        <Link to="/Post">Post</Link>
                     </Grid>
                     <Grid item xs={1}>
                         <Link to="/Support">Support</Link>

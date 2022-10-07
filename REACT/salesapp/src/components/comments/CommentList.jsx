@@ -6,7 +6,7 @@ import axios from "axios";
 export const CommentList=()=>{
     const [data,setData]=useState([]);
     const [comment,setComment] = useState([]);
-    const [loding,setLoding]=useState(false);
+
    
 
     useEffect(()=> {
@@ -14,12 +14,15 @@ export const CommentList=()=>{
         setLoding(true);
         const res = await axios.get("https://jsonplaceholder.typicode.com/comments");
         setComment(res,data);
-        setLoding(false);
+
         }
 
         fetchComments();
 
     },[]); 
+    
+
+
 
     const getData= async ()=>{
         const result = await axios.get("https://jsonplaceholder.typicode.com/comments")

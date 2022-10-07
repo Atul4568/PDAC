@@ -3,7 +3,7 @@ import { Grid,Card,CardContent } from "@mui/material";
 
 export const UserItem=({item})=>{
     return(
-        <Grid item xs={3}>
+        <Grid item xs={4}>
             <Card sx={{bgcolor:"lightcoral",borderRadius: "0px 20px 0px 20px", border:"2px solid black"} }>
                 <CardContent>
                     <p><b>name: </b>{item.name}</p>

@@ -1,11 +1,13 @@
 import React from 'react';
 
-const Posts = ({ posts, loading }) => {
+export const Posts=({ posts, loading })=> {
   if (loading) {
     return <h2>Loading...</h2>;
   }
 
   return (
+    <>
+    <h1>Atul</h1>
     <ul className='list-group mb-4'>
       {posts.map(post => (
         <li key={post.id} className='list-group-item'>
@@ -13,7 +15,6 @@ const Posts = ({ posts, loading }) => {
         </li>
       ))}
     </ul>
+    </>
   );
-};
-
-export default Posts;
+}
