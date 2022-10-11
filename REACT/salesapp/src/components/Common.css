@@ -2,7 +2,7 @@
     margin: 10px;
 }
 a{
-    background-color: navy;
+    /* background-color: #095379; */
     color: white;
     text-decoration: none;
     margin: 20px;
@@ -10,21 +10,21 @@ a{
     border-radius: 5px;
 }
 a:hover{
-    background-color: yellow;
-    color: black;
+    /* background-color: black; */
+    /* color: black; */
 }
 a:visited{
-    color: blsck;
+    color: white;
 }
 img{
     height: 180px;
     width: 350px;
 }
-nav{
+/* nav{
     background-color: black;
     padding: 25px;
     margin: 10px;
-}
+} */
 div{
     padding: 10px;
 }

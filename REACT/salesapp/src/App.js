@@ -2,17 +2,20 @@ import{BrowserRouter, Routes,Route} from "react-router-dom";
 import {Home} from "./components/home/Home"
 import { CustomerList } from "./components/customer/CustomerList";
 import {Support} from"./components/support/Support";
-import {Nav} from "./components/navbar/Nav";
+// import {Nav} from "./components/navbar/Nav";
 import { ProductList } from "./components/product/ProductList";
 import { Greet } from "./components/greet/Greet";
 import { UserList } from "./components/user/UserList";
 import { TodoList } from "./components/todo/TodoList";
 import { CommentList } from "./components/comments/CommentList";
-import { AllUserList } from "./components/AllUserList";
+import { AllUserList } from "./components/Users/AllUserList";
+import NavBar from "./components/navbar/NavBar";
+import { DeviceList } from "./components/Device/DeviceList";
+import { StudentList } from "./components/Student/studentList";
+import { Movie } from "./components/movie/Movie";
 
-import "./components/Common.css"
-import { DeviceList } from "./components/DeviceList";
 // import { Posts } from "./components/Posts/Posts";
+import "./components/Common.css"
 
 
 
@@ -20,7 +23,7 @@ function App() {
   return (
     <div className="main">
       <BrowserRouter>
-      <Nav/>
+      <NavBar/>
       <Routes>
         <Route path="/Home" element={<Home/>}/>
         <Route path="/greet" element={<Greet/>}/>
@@ -32,6 +35,8 @@ function App() {
         <Route path="/Comment" element={<CommentList/>}/>
         <Route path="/allusers" element={<AllUserList/>}/>
         <Route path="/devices" element={<DeviceList/>}/>
+        <Route path="/students" element={<StudentList/>}/>
+        <Route path="/movie" element={<Movie/>}/>
         {/* <Route path="/Post" element={<Posts/>}/> */}
       </Routes>
       </BrowserRouter>

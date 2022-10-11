@@ -6,6 +6,7 @@ app.use(cors());
 app.use(json())
 
 app.get("/", (req,res)=>{
+
     res.send("Thanks for Contacting Atul's Shopping Center")
 });
 

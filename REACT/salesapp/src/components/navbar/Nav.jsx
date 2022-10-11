@@ -36,10 +36,13 @@ export const Nav=()=>{
                         <Link to="/Support">Support</Link>
                     </Grid>
                     <Grid item xs={1}>
-                        <Link to="/allusers">All User List</Link>
+                        <Link to="/allusers">Users</Link>
                     </Grid>
                     <Grid item xs={1}>
-                        <Link to="/devices">Device List</Link>
+                        <Link to="/devices">Device</Link>
+                    </Grid>
+                    <Grid item xs={1}>
+                        <Link to="/students">Student</Link>
                     </Grid>
                 </Grid>
             </nav>
