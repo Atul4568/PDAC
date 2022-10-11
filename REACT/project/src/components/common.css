@@ -30,7 +30,7 @@ div{
     padding: 10px;
 }
 .CardProduct:hover{
-    transform: scale(1.1);
+    transform: scale(1.01);
 }
 
 /* posts */

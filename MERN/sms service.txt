@@ -1,0 +1,7 @@
+MicroServices
+
+==> Monolithic App
+
+		    |		 		     |
+		App Server			Data Server
+     (UI Layer, Logical Layer, Model)	()

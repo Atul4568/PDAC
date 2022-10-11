@@ -8,8 +8,10 @@ import { Greet } from "./components/greet/Greet";
 import { UserList } from "./components/user/UserList";
 import { TodoList } from "./components/todo/TodoList";
 import { CommentList } from "./components/comments/CommentList";
+import { AllUserList } from "./components/AllUserList";
 
 import "./components/Common.css"
+import { DeviceList } from "./components/DeviceList";
 // import { Posts } from "./components/Posts/Posts";
 
 
@@ -28,8 +30,9 @@ function App() {
         <Route path="/Users" element={<UserList/>}/>
         <Route path="/Todo" element={<TodoList/>}/>
         <Route path="/Comment" element={<CommentList/>}/>
+        <Route path="/allusers" element={<AllUserList/>}/>
+        <Route path="/devices" element={<DeviceList/>}/>
         {/* <Route path="/Post" element={<Posts/>}/> */}
-
       </Routes>
       </BrowserRouter>
     </div>

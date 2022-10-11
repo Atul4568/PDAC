@@ -35,6 +35,12 @@ export const Nav=()=>{
                     <Grid item xs={1}>
                         <Link to="/Support">Support</Link>
                     </Grid>
+                    <Grid item xs={1}>
+                        <Link to="/allusers">All User List</Link>
+                    </Grid>
+                    <Grid item xs={1}>
+                        <Link to="/devices">Device List</Link>
+                    </Grid>
                 </Grid>
             </nav>
         </div>

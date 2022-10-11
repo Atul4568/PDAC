@@ -11,6 +11,8 @@ export const BinanceList=()=>{
     // const [cat,setCat]=useState("");
     const [rate,setRate]=useState(0);
 
+   
+
     const getData= async ()=>{
         const result= await axios.get("https://api2.binance.com/api/v3/ticker/24hr");
         setData(result.data)
@@ -19,6 +21,14 @@ export const BinanceList=()=>{
         // const resultCat= await axios.get("https://api2.binance.com/api/v3/ticker/24hr")
         // setCatData(resultCat.data.slice(0,50));
     }
+    useEffect(()=>{
+        setTimeout(() => {
+           
+            console.log("===>called")
+            getData();
+        }, 5000);
+    })
+ 
     useEffect(()=>{
         const filtred=data.filter((item)=>
         item.symbol.toUpperCase().includes(txt.toUpperCase()) )
